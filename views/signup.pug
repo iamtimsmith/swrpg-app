@@ -1,0 +1,17 @@
+if error
+	p= error
+form(method=`post` action=`/signup`)
+	div
+		label(for=`name`) Name: 
+		input(type=`text` name=`name` id=`name`)
+	div
+		label(for=`email`) Email: 
+		input(type=`text` name=`email` id=`email`)
+	div
+		label(for=`password`) Password: 
+		input(type=`password` name=`password` id=`password`)
+	div
+		label(for=`confirm`) Confirm Password: 
+		input(type=`password` name=`confirm` id=`confirm`)
+	button Signup
+	a(href=`/login`) Already have an account?

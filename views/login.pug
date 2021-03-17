@@ -1,0 +1,11 @@
+if error
+	p= error
+form(method=`post` action=`/login`)
+	div
+		label(for=`email`) Email: 
+		input(type=`text` name=`email` id=`email`)
+	div
+		label(for=`password`) Password: 
+		input(type=`password` name=`password` id=`password`)
+	button Login 
+	a(href=`/signup`) Need an account?
