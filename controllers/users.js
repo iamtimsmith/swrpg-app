@@ -1,4 +1,5 @@
 const bcrypt = require(`bcrypt`);
+const passport = require(`passport`);
 const db = require(`../config/database`);
 
 module.exports = {
@@ -21,4 +22,9 @@ module.exports = {
 		});
 	},
 	loginPage: (req, res) => res.render(`login`),
+	login: passport.authenticate('local', {
+		successRedirect: '/',
+		failureRedirect: '/login',
+		failureFlash: `There was an error. Please try again!`
+	})
 }
