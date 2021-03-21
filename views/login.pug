@@ -1,11 +1,14 @@
-if error
-	p= error
-form(method=`post` action=`/login`)
-	div
-		label(for=`email`) Email: 
-		input(type=`text` name=`email` id=`email`)
-	div
-		label(for=`password`) Password: 
-		input(type=`password` name=`password` id=`password`)
-	button Login 
-	a(href=`/signup`) Need an account?
+extends layout
+
+block content
+	if error
+		div.alert.alert-danger= error
+	form(method=`post` action=`/login`)
+		div.form-group
+			label.form-label(for=`email`) Email: 
+			input.form-control(type=`text` name=`email` id=`email`)
+		div.form-group
+			label.form-label(for=`password`) Password: 
+			input.form-control(type=`password` name=`password` id=`password`)
+		button.btn.btn-primary.btn-lg Login 
+		a.btn.btn-link(href=`/signup`) Need an account?

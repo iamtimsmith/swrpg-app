@@ -4,12 +4,15 @@
   "description": "My App",
   "main": "start.js",
   "scripts": {
-    "dev": "nodemon"
+    "dev": "concurrently \"npm run server\" \"npm run sass\"",
+    "server": "nodemon",
+    "sass": "sass --style compressed --watch public/scss:public/css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "bootstrap": "^4.6.0",
     "connect-flash": "^0.1.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -20,6 +23,8 @@
     "pug": "^3.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7",
+    "sass": "^1.32.8"
   }
 }
