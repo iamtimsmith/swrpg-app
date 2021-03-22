@@ -6,6 +6,7 @@ passport.use(new LocalStrategy({usernameField: `email`}, (username, password, do
 	db.query(`CALL usp_getUserByEmail(?)`, [username], (err, results, fields) => {
 		const user = results[0];
 		if (err) return done(err);
+		console.log(user[0]);
 		if (user.length === 0) return done(nulll, false, {message: `Incorrect username.`});
 		if (!user[0].validPassword(password)) return done(nulll, false, {message: `Incorrect password.`});
 		return done(null, user[0]);
