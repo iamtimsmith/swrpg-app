@@ -5,7 +5,7 @@ const db = require(`../config/database`);
 module.exports = {
 	login: passport.authenticate(`local`, {
 		failureRedirect: '/login',
-		failureFlash: 'Failed Login!',
+		failureFlash: 'Incorrect email or password. Please try again.',
 		successRedirect: '/',
 		successFlash: 'You are now logged in!'
 	}),

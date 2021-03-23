@@ -1,8 +1,6 @@
 extends layout
 
 block content
-	if error
-		div.alert.alert-danger= error
 	form(method=`post` action=`/login`)
 		div.form-group
 			label.form-label(for=`email`) Email: 

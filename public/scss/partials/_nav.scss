@@ -1,0 +1,28 @@
+.nav {
+	background: black;
+	padding: 5px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	&__menu {
+		display: flex;
+		
+		li {
+			display: block;
+			padding: 15px 10px;
+			
+			a {
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__brand {
+		font-size: 2rem;
+		font-weight: bold;
+		text-decoration: none;
+		color: white;
+	}
+}
